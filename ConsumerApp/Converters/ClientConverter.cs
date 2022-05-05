@@ -4,7 +4,7 @@ namespace ConsumerApp.Converters
 {
     public class ClientConverter
     {
-        public static Client jsonToString(string jsonString){
+        public static Client jsonToClient(string jsonString){
             Client cliente = new Client();
             cliente = JsonSerializer.Deserialize<Client>(jsonString);
             return cliente;

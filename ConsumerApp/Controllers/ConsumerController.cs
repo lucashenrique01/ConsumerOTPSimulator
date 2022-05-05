@@ -12,6 +12,8 @@ namespace ConsumerControllerNamespace
         EventService eventService = new EventService();
         public void ConsumerTopic(string topicName){
 
+            EventTransactionDAO eventDAO = new EventTransactionDAO();
+
             BrokerContext brokerContext = new BrokerContext();
             string bootstrapServers = brokerContext.getBroker();
 
@@ -36,6 +38,7 @@ namespace ConsumerControllerNamespace
 
                     try
                     {
+
                         while (true)
                         {
                             var cr = consumer.Consume(cts.Token);

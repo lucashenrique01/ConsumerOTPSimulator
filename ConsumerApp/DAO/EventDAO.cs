@@ -19,15 +19,15 @@ namespace EventDaoNamespace{
                 {
                     command.CommandText = @"INSERT INTO event (IdEvent, SpecVersion, Source, Type, Subject, Time, CorrelationID, DataContentType, Data) VALUES 
                     (@IdEvent, @SpecVersion, @Source, @Type, @Subject, @Time, @CorrelationID, @DataContentType, @Data);";
-                    command.Parameters.AddWithValue("@IdEvent", newEvent.getId());
-                    command.Parameters.AddWithValue("@SpecVersion", newEvent.getSpecVersion());
-                    command.Parameters.AddWithValue("@Source", newEvent.getSource());
-                    command.Parameters.AddWithValue("@Type", newEvent.getType());
-                    command.Parameters.AddWithValue("@Subject", newEvent.getSubject());
-                    command.Parameters.AddWithValue("@Time", newEvent.getTime());
-                    command.Parameters.AddWithValue("@CorrelationID", newEvent.getCorrelationID());
-                    command.Parameters.AddWithValue("@DataContentType", newEvent.getDataContentType());
-                    command.Parameters.AddWithValue("@Data", newEvent.getData());           
+                    command.Parameters.AddWithValue("@IdEvent", newEvent.id);
+                    command.Parameters.AddWithValue("@SpecVersion", newEvent.specVersion);
+                    command.Parameters.AddWithValue("@Source", newEvent.source);
+                    command.Parameters.AddWithValue("@Type", newEvent.type);
+                    command.Parameters.AddWithValue("@Subject", newEvent.subject);
+                    command.Parameters.AddWithValue("@Time", newEvent.time);
+                    command.Parameters.AddWithValue("@CorrelationID", newEvent.correlationID);
+                    command.Parameters.AddWithValue("@DataContentType", newEvent.dataContentType);
+                    command.Parameters.AddWithValue("@Data", newEvent.data);           
                     await command.ExecuteNonQueryAsync();
                     Console.WriteLine("Um evento gravado");                           
                 }

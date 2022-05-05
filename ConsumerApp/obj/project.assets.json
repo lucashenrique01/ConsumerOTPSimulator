@@ -3428,11 +3428,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Buiu\\Desktop\\Consumer-Class\\ConsumerApp\\ConsumerApp.csproj",
+      "projectUniqueName": "C:\\Users\\Buiu\\Desktop\\ConsumerOTPSimulator\\ConsumerApp\\ConsumerApp.csproj",
       "projectName": "ConsumerApp",
-      "projectPath": "c:\\Users\\Buiu\\Desktop\\Consumer-Class\\ConsumerApp\\ConsumerApp.csproj",
+      "projectPath": "C:\\Users\\Buiu\\Desktop\\ConsumerOTPSimulator\\ConsumerApp\\ConsumerApp.csproj",
       "packagesPath": "C:\\Users\\Buiu\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Buiu\\Desktop\\Consumer-Class\\ConsumerApp\\obj\\",
+      "outputPath": "C:\\Users\\Buiu\\Desktop\\ConsumerOTPSimulator\\ConsumerApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Buiu\\AppData\\Roaming\\NuGet\\NuGet.Config",

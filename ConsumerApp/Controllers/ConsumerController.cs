@@ -13,8 +13,7 @@ namespace ConsumerControllerNamespace
         EventTransactionService eventTransactionService = new EventTransactionService();
         
         public void ConsumerTopic(string topicName){
-
-            EventTransactionDAO eventDAO = new EventTransactionDAO();
+           
 
             BrokerContext brokerContext = new BrokerContext();
             string bootstrapServers = brokerContext.getBroker();

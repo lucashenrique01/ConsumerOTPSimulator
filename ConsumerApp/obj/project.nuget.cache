@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0cITC8ZjuVB3betIdnHz9OfROGjjqg3zN95r3qld+TtcOWH7B3PXqGUMzWaC5Xl1BdXnzoJc2QJ0NFfUEDqgbQ==",
+  "dgSpecHash": "srLbB4mOGYVAj9jrL2CCmxhxsEPMNqIWQQZbRM5xUjl6E2whrp8uz+whJ1NqvmAns6duVvaqRyYs9t6hFyFBPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Buiu\\Desktop\\Consumer-Class\\ConsumerApp\\ConsumerApp.csproj",
+  "projectFilePath": "C:\\Users\\Buiu\\Desktop\\ConsumerOTPSimulator\\ConsumerApp\\ConsumerApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Buiu\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Buiu\\.nuget\\packages\\confluent.kafka\\1.4.0\\confluent.kafka.1.4.0.nupkg.sha512",

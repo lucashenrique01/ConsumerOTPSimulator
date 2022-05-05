@@ -1,6 +1,7 @@
 using System;
 using MysqlContext;
 using ConsumerApp.Models;
+using MySqlConnector;
 
 namespace EventDaoNamespace{
 
@@ -14,9 +15,14 @@ namespace EventDaoNamespace{
                 Console.WriteLine("Opening connection");
                 using (var conn = new MySqlConnection(builder.ConnectionString))
                 {
-                    command.CommandText = "CREATE TABLE IF NOT EXISTS eventTransaction (Id serial PRIMARY KEY auto_increment, token VARCHAR(50), idClient VARCHAR(50), idTransacao VARCHAR(50), canalSolicitante VARCHAR(50), duracaoToken datetime);";
+                    await conn.OpenAsync();
+                    using (var command = conn.CreateCommand()) 
+                    { 
+                        command.CommandText = "CREATE TABLE IF NOT EXISTS eventTransaction (Id serial PRIMARY KEY auto_increment, token VARCHAR(50), idClient VARCHAR(50), idTransacao VARCHAR(50), canalSolicitante VARCHAR(50), duracaoToken datetime);";
                     await command.ExecuteNonQueryAsync();
                     Console.WriteLine("Finished creating table");
+                    }
+                    
                 }
             }
             catch(Exception e){
@@ -36,11 +42,11 @@ namespace EventDaoNamespace{
                 {
                     command.CommandText = @"INSERT INTO eventTransaction (token, idClient, idTransacao, canalSolicitante, duracaoToken) VALUES 
                     (@token, @idClient, @idTransacao, @canalSolicitante, @duracaoToken);";
-                    command.Parameters.AddWithValue("@token", newEvent.getToken());
-                    command.Parameters.AddWithValue("@idClient", newEvent.getIdClient);
-                    command.Parameters.AddWithValue("@idTransacao", newEvent.getIdTransacao());
-                    command.Parameters.AddWithValue("@canalSolicitante", newEvent.getCanalSolicitante());                          
-                    command.Parameters.AddWithValue("@duracaoToken", newEvent.getDuracaoToken());                          
+                    command.Parameters.AddWithValue("@token", newEvent.token);
+                    command.Parameters.AddWithValue("@idClient", newEvent.idClient);
+                    command.Parameters.AddWithValue("@idTransacao", newEvent.idTransacao);
+                    command.Parameters.AddWithValue("@canalSolicitante", newEvent.canalSolicitante);                          
+                    command.Parameters.AddWithValue("@duracaoToken", newEvent.duracaoToken);                          
                     await command.ExecuteNonQueryAsync();
                     Console.WriteLine("Um evento gravado");                           
                 }

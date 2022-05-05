@@ -3,7 +3,10 @@
     "",
     "\\ConsumerApp",
     "\\ConsumerApp\\Contexts",
-    "\\ConsumerApp\\Models"
+    "\\ConsumerApp\\Controllers",
+    "\\ConsumerApp\\DAO",
+    "\\ConsumerApp\\Models",
+    "\\ConsumerApp\\Services"
   ],
   "SelectedNode": "\\ConsumerApp\\Program.cs",
   "PreviewInSolutionExplorer": false

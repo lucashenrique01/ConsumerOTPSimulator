@@ -1,9 +1,9 @@
 using System;
-using EventNamespace;
+using ConsumerApp.Models;
 using EventDaoNamespace;
 using Newtonsoft.Json.Linq;
 
-namespace ConsumerServiceNamespace{
+namespace ConsumerApp.Services{
     class EventService
     {
         EventDAO eventDao = new EventDAO();

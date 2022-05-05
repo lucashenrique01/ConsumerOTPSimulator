@@ -1,6 +1,6 @@
 ﻿using BrokerContextNamespace;
 using ConsumerControllerNamespace;
-using ConsumerServiceNamespace;
+using ConsumerApp.Services;
 
 namespace ConsumerApp
 {

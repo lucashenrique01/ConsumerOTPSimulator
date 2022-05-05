@@ -1,6 +1,6 @@
 using System;
 using MysqlContext;
-using EventNamespace;
+using ConsumerApp.Models;
 using MySqlConnector;
 
 namespace EventDaoNamespace{

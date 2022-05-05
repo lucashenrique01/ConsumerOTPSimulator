@@ -1,59 +1,33 @@
-namespace EventNamespace
+namespace ConsumerApp.Models
 {
     public class Event {
-        private string Id {get; set;}
-        private string SpecVersion {get; set;}
-        private string Source {get; set;}
-        private string Type {get;set;}
-        private string Subject {get;set;}
-        private string Time {get;set;}
-        private string CorrelationID {get;set;}
-        private string DataContentType {get;set;}
-        private string Data {get;set;}
+        public string id {get; set;}
+        public string specVersion {get; set;}
+        public string source {get; set;}
+        public string type {get;set;}
+        public string subject {get;set;}
+        public string time {get;set;}
+        public string correlationID {get;set;}
+        public string dataContentType {get;set;}
+        public string data {get;set;}
 
         public Event(string id, string specVersion, string source, string type, string subject, string time, string correlationid,
         string datacontentype, string data)
         {
-            this.Id=id;
-            this.SpecVersion=specVersion;
-            this.Source=source;
-            this.Type=type;
-            this.Subject=subject;
-            this.Time=time;
-            this.CorrelationID=correlationid;
-            this.DataContentType=datacontentype;
-            this.Data=data;
+            this.id=id;
+            this.specVersion=specVersion;
+            this.source=source;
+            this.type=type;
+            this.subject=subject;
+            this.time=time;
+            this.correlationID=correlationid;
+            this.dataContentType=datacontentype;
+            this.data=data;
         }     
         public Event(){
             
         }
         
-        public string getId(){
-            return this.Id;
-        }
-        public string getSpecVersion(){
-            return this.SpecVersion;
-        }
-        public string getSource(){
-            return this.Source;
-        }
-        public string getType(){
-            return this.Type;
-        }
-        public string getSubject(){
-            return this.Subject;
-        }
-        public string getTime(){
-            return this.Time;
-        }
-        public string getCorrelationID(){
-            return this.CorrelationID;
-        }
-        public string getDataContentType(){
-            return this.DataContentType;
-        }
-        public string getData(){
-            return this.Data;
-        }
+       
     }
 }

@@ -34,7 +34,7 @@ namespace MysqlContext
             {
                 password = Environment.GetEnvironmentVariable("MYSQL_PASSWORD");
             } else {
-                return password = "password";
+                return password = "5623";
             }
             return password;
         }
@@ -45,7 +45,7 @@ namespace MysqlContext
             {
                 database = Environment.GetEnvironmentVariable("MYSQL_DATABASE");
             } else {
-                return database = "event";
+                return database = "pocTest";
             }
             return database;
         }

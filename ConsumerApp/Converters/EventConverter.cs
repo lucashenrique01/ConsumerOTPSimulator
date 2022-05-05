@@ -1,4 +1,4 @@
-using EventNamespace;
+using ConsumerApp.Models;
 using System.Text.Json;
 namespace ConsumerApp.Converters
 {

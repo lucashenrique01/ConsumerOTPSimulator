@@ -3,13 +3,15 @@ using System.Threading;
 using Serilog;
 using Confluent.Kafka;
 using BrokerContextNamespace;
-using ConsumerServiceNamespace;
+using ConsumerApp.Services;
+using ConsumerApp.Converters;
 
 namespace ConsumerControllerNamespace
 {   
     class ConsumerController {
         
-        EventService eventService = new EventService();
+        EventTransactionService eventTransactionService = new EventTransactionService();
+        
         public void ConsumerTopic(string topicName){
 
             EventTransactionDAO eventDAO = new EventTransactionDAO();
@@ -45,7 +47,7 @@ namespace ConsumerControllerNamespace
                             logger.Information(
                                 $"Mensagem lida: {cr.Message.Value}");
                             string eventoString = cr.Message.Value.ToString();                            
-                            eventService.convertEvent(eventoString);
+                            eventTransactionService.save(EventConverter.jsonToEvent(eventoString));
                         }
                     }
                     catch (OperationCanceledException)

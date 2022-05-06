@@ -30,10 +30,11 @@ namespace ConsumerApp.Services{
         public void createTable(){
             eventDAO.createTableEventTransaction();
         }
-        private string tokenGenerate(){
+        private string tokenGenerate()
+        {
             Random tokenRandom = new Random();
             string token = tokenRandom.Next(0, 1000000).ToString("D6");
             return token;
-        }  
+        }
     }
 }

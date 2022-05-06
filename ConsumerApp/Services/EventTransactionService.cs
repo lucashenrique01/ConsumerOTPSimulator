@@ -12,10 +12,10 @@ namespace ConsumerApp.Services{
         private const int MINUTESADD = 5;
 
         public void save(Event eventt){
-            ClientOTP clientOTP = ClientOTPConverter.jsonToClientOTP(eventt.data);
+            ClientOTP clientOTP = ClientOTPConverter.jsonToClientOTP(eventt.data.ToString());
             EventTransaction eventTransaction = new EventTransaction();
 
-            Client client = ClientConverter.jsonToClient(clientOTP.cliente);
+            Client client = ClientConverter.jsonToClient(clientOTP.cliente.ToString());
             eventTransaction.token = tokenGenerate();
             eventTransaction.idClient = client.idCliente;
             eventTransaction.idTransacao = clientOTP.idTransacao;
@@ -32,8 +32,7 @@ namespace ConsumerApp.Services{
         }
         private string tokenGenerate(){
             Random tokenRandom = new Random();
-            tokenRandom.Next(100000,999999);
-            string token = Convert.ToString(tokenRandom);
+            string token = tokenRandom.Next(0, 1000000).ToString("D6");
             return token;
         }  
     }

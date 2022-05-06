@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 namespace ConsumerApp.Models
 {
     public class Event {
@@ -9,10 +10,10 @@ namespace ConsumerApp.Models
         public string time {get;set;}
         public string correlationID {get;set;}
         public string dataContentType {get;set;}
-        public string data {get;set;}
+        public JObject data {get;set;}
 
         public Event(string id, string specVersion, string source, string type, string subject, string time, string correlationid,
-        string datacontentype, string data)
+        string datacontentype, JObject data)
         {
             this.id=id;
             this.specVersion=specVersion;

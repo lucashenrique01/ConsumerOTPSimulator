@@ -1,12 +1,12 @@
 using ConsumerApp.Models;
-using System.Text.Json;
+using Newtonsoft.Json;
 namespace ConsumerApp.Converters
 {
     public class ClientConverter
     {
         public static Client jsonToClient(string jsonString){
             Client cliente = new Client();
-            cliente = JsonSerializer.Deserialize<Client>(jsonString);
+            cliente = JsonConvert.DeserializeObject<Client>(jsonString);
             return cliente;
         }
     }
